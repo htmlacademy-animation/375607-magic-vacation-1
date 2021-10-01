@@ -241,6 +241,7 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition: color .2s linear;
 
     &::after {
       content: "";
@@ -251,6 +252,7 @@
       background-color: $c-light;
       display: none;
       left: 0;
+      transition: background-color .2s linear;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -281,6 +283,25 @@
         background-color: $c-purple;
       }
     }
+  }
+
+  a:not(.active){
+    &::after {
+      display: block;
+      width: 0;
+      right:0;
+      left: auto;
+      transition: width .3s ease;
+    }
+
+    &:hover{
+      &::after {
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+
   }
 }
 
