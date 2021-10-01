@@ -6,6 +6,28 @@
       opacity: 1;
       pointer-events: auto;
     }
+
+  }
+
+  &--active {
+
+    .social-block__link {
+      opacity: 1;
+      transform: translateY(0);
+
+      &--fb {
+        transition: opacity .3s ease-out .2s, transform .2s ease-out .2s;
+      }
+
+      &--insta {
+        transition: opacity .3s ease-out .4s, transform .2s ease-out .4s;
+      }
+
+      &--vk {
+        transition: opacity .3s ease-out .6s, transform .2s ease-out .6s;
+      }
+    }
+
   }
 }
 
@@ -35,6 +57,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all ease .4s;
   }
 
   svg {
@@ -42,15 +65,24 @@
     display: block;
     width: 2.3rem;
     height: 2.2rem;
+    transition: color ease .4s;
   }
 
-  &:hover,
-  .social-block--active & {
+  &:hover {
     color: $c-purple;
 
     &::before {
       width: 112.5%;
       height: 112.5%;
+    }
+  }
+
+  .social-block--active &:not(:hover) {
+    color: #ffffff;
+
+    &::before {
+      background-color: $c-purple;
+      border: 2px solid $c-purple;
     }
   }
 
@@ -168,6 +200,8 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  opacity: 0;
+  transform: translateY(40%);
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -204,6 +238,7 @@
 
   svg {
     @include center;
+    transition: color .2s;
   }
 
   &--fb {
