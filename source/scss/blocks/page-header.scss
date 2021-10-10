@@ -35,6 +35,14 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  left: -1rem;
+  opacity: 0;
+
+  .loaded & {
+    transition: all .5s cubic-bezier(.54,.86,.26,.86);
+    left: 0;
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -177,6 +185,12 @@
   font-size: 1.2rem;
   line-height: 1.0418;
   color: $c-light;
+  opacity: 0;
+
+  .loaded & {
+    transition: opacity .5s cubic-bezier(.54,.86,.26,.86);
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     font-size: 12px;
@@ -247,10 +261,9 @@
       content: "";
       position: absolute;
       bottom: 0;
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: $c-light;
-      display: none;
       left: 0;
       transition: background-color .2s linear;
 
@@ -268,8 +281,8 @@
     }
 
     &.active {
-      &::after {
-        display: block;
+      &::after{
+        width: 0;
       }
     }
 
@@ -304,7 +317,16 @@
 
   }
 }
-
+.loaded {
+  .page-header__menu{
+    a.active{
+      &::after{
+        transition: width .5s cubic-bezier(.54,.86,.26,.86);
+        width: 100%;
+      }
+    }
+  }
+}
 .page-header__social {
   margin-left: 4.8rem;
 
