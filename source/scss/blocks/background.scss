@@ -1,0 +1,15 @@
+.background {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $c-dark;
+  z-index: 1;
+  height: 0;
+  transition: height .3s linear;
+}
+.transition{
+  .background{
+    height: 100%
+  }
+}
