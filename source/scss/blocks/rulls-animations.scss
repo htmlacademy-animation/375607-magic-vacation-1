@@ -22,7 +22,7 @@
     }
   }
 
-  p{
+  p {
     opacity: 0;
     transform: translateX(5%);
     animation-name: text-right;
@@ -31,64 +31,66 @@
     animation-delay: .3s;
   }
 
-  &:nth-child(2){
-    &::before{
+  &:nth-child(2) {
+    &::before {
       animation-delay: .3s;
     }
-    p{
+    p {
       animation-delay: .5s;
     }
   }
 
-  &:nth-child(3){
+  &:nth-child(3) {
     &::before {
       animation-delay: .5s;
     }
-    p{
+    p {
       animation-delay: .7s;
     }
   }
 
-  &:nth-child(4){
+  &:nth-child(4) {
     &::before {
       animation-delay: .7s;
     }
-    p{
+    p {
       animation-delay: .9s;
     }
   }
 }
 
-.rules__link{
+.rules__link {
   animation-name: rules-link;
   animation-duration: 2.6s;
   animation-fill-mode: forwards;
-  color: rgba(95,69,140, 0);
+  color: rgba(95, 69, 140, 0);
   opacity: 0;
   width: 0;
   max-width: 240px;
   animation-delay: .7s;
 
-  @media (max-width: $tablet){
+  @media (max-width: $tablet) {
     max-width: 100%;
   }
 }
+
 @keyframes rules-link {
-  10%{
-    color: rgba(95,69,140, 0);
+  10% {
+    color: rgba(95, 69, 140, 0);
   }
   30% {
     opacity: 1;
   }
   60% {
-    color: rgba(95,69,140, 1);
+    color: rgba(95, 69, 140, 1);
   }
   100% {
-    color: rgba(95,69,140, 1);
+    color: rgba(95, 69, 140, 1);
     width: 100%;
     opacity: 1;
   }
 }
+
 @keyframes text-right {
 
   100% {
@@ -96,44 +98,46 @@
     transform: translateX(0);
   }
 }
+
 @keyframes bullet {
-  40%{
-    color: rgba(255,255,255, 0);
+  40% {
+    color: rgba(255, 255, 255, 0);
   }
   50% {
     width: 4.5rem;
     height: 4.5rem;
     transform: translate(0, 0);
-    color: rgba(255,255, 255, 1);
+    color: rgba(255, 255, 255, 1);
   }
-  60%{
+  60% {
     font-size: 100%;
   }
   100% {
     width: 4.5rem;
     height: 4.5rem;
-    color: rgba(255,255,255, 1);
+    color: rgba(255, 255, 255, 1);
     transform: translate(0, 0);
     font-size: 100%;
   }
 }
+
 @keyframes bullet-mobile {
-  40%{
-    color: rgba(255,255,255, 0);
+  40% {
+    color: rgba(255, 255, 255, 0);
   }
   50% {
     width: 2.5rem;
     height: 2.5rem;
     transform: translate(0, 0);
-    color: rgba(255,255, 255, 1);
+    color: rgba(255, 255, 255, 1);
   }
-  60%{
+  60% {
     font-size: 100%;
   }
   100% {
     width: 2.5rem;
     height: 2.5rem;
-    color: rgba(255,255,255, 1);
+    color: rgba(255, 255, 255, 1);
     transform: translate(0, 0);
     font-size: 100%;
   }
