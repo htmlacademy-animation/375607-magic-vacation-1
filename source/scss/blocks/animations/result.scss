@@ -1,0 +1,101 @@
+.screen--result {
+
+  &.screen--show {
+    .form-field-animation {
+      animation-name: resultField;
+      animation-timing-function: ease-out;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      box-sizing: border-box;
+    }
+    .form__field {
+      opacity: 1;
+    }
+
+    .form__button {
+      animation-name: resultBtn;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      color: $c-light;
+    }
+  }
+}
+
+.form--result {
+  .form-field-animation {
+    width: calc(100% - 31rem);
+    margin-right: 3rem;
+    opacity: 0;
+    margin-left: auto;
+    position: relative;
+
+    @media (min-width: $stop-scaling) {
+      width: calc(100% - 310px);
+    }
+
+    @media (orientation: portrait) {
+      width: calc(100% - 5rem);
+    }
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: calc(100% - 9rem);
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: calc(100% - 5rem);
+    }
+
+    .form__field {
+      width: 100%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $c-light;
+      border-radius: 3rem;
+      animation-name: resultFieldBefore;
+      animation-delay: .5s;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes resultField {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes resultFieldBefore {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes resultBtn {
+  0% {
+    color: $c-light;
+  }
+  100% {
+    color: $c-dark;
+  }
+}

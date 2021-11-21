@@ -352,6 +352,10 @@
   &.screen--show {
     opacity: 1;
     pointer-events: auto;
+
+    .form__field {
+
+    }
   }
 }
 

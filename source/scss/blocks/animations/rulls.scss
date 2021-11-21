@@ -12,12 +12,12 @@
     animation-timing-function: cubic-bezier(.50, .92, .70, 1.20);
 
     @media (max-width: $tablet) and (orientation: portrait) {
-      animation-name: bullet-mobile;
+      animation-name: bulletMobile;
       transform: translate(1.25rem, 1.25rem);
     }
 
     @media (max-width: $mobile) and (orientation: landscape) {
-      animation-name: bullet-mobile;
+      animation-name: bulletMobile;
       transform: translate(1.25rem, 1.25rem);
     }
   }
@@ -25,7 +25,7 @@
   p {
     opacity: 0;
     transform: translateX(5%);
-    animation-name: text-right;
+    animation-name: textRight;
     animation-duration: .4s;
     animation-fill-mode: forwards;
     animation-delay: .3s;
@@ -60,7 +60,7 @@
 }
 
 .rules__link {
-  animation-name: rules-link;
+  animation-name: rulesLink;
   animation-duration: 2.6s;
   animation-fill-mode: forwards;
   color: rgba(95, 69, 140, 0);
@@ -74,7 +74,12 @@
   }
 }
 
-@keyframes rules-link {
+@keyframes rulesLink {
+  0% {
+    color: rgba(95, 69, 140, 0);
+    opacity: 0;
+    width: 0;
+  }
   10% {
     color: rgba(95, 69, 140, 0);
   }
@@ -91,8 +96,11 @@
   }
 }
 
-@keyframes text-right {
-
+@keyframes textRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -100,6 +108,13 @@
 }
 
 @keyframes bullet {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    width: 0;
+    height: 0;
+    font-size: 0;
+    transform: translate(2.25rem, 2.25rem);
+  }
   40% {
     color: rgba(255, 255, 255, 0);
   }
@@ -121,7 +136,14 @@
   }
 }
 
-@keyframes bullet-mobile {
+@keyframes bulletMobile {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    width: 0;
+    height: 0;
+    font-size: 0;
+    transform: translate(1.25rem, 1.25rem);
+  }
   40% {
     color: rgba(255, 255, 255, 0);
   }
