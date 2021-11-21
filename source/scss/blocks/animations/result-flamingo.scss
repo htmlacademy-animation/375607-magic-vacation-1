@@ -1,0 +1,207 @@
+.result-flamingo {
+  width: 534px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 7%;
+
+  @media (max-width: $mobile) {
+    width: 384px;
+    height: 290px;
+    margin-bottom: auto
+  }
+  @media (max-width: $tablet) {
+    margin-bottom: auto
+  }
+}
+
+.result-flamingo__bird {
+  display: block;
+  transform: rotate(-35deg) translateY(100%);
+  animation-name: bird;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  width: 48%;
+  top: 31%;
+}
+
+.result-flamingo__suitcase {
+  display: block;
+  animation-name: suitcase;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  margin-left: -19%;
+  position: relative;
+  z-index: 2;
+}
+
+.result-flamingo__leaf-right {
+  width: 54%;
+  position: absolute;
+  right: -4%;
+  top: 4%;
+  opacity: 0;
+  transform: rotateZ(-20deg) translate3d(-30px, -42px, 0);
+  animation-name: leafRight;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: .45s;
+  animation-direction: alternate;
+}
+
+.result-flamingo__leaf-left {
+  width: 50%;
+  position: absolute;
+  left: -19%;
+  top: 29%;
+  z-index: 1;
+  opacity: 0;
+  transform: rotateZ(30deg) translate3d(8px, -85px, 0);
+  animation-name: leafLeft;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: .45s;
+  animation-direction: alternate;
+}
+
+.result-flamingo__leaf-green {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 30%;
+  opacity: 0;
+  transform: rotateZ(-5deg) translate3d(-25px, -25px, 0);
+  animation-name: leafGreen;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: .6s;
+  animation-direction: alternate;
+}
+
+@keyframes bird {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-35deg) translateY(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: rotateZ(0) translateY(0);
+  }
+  30% {
+    transform: rotateZ(-3deg) translateY(20px);
+  }
+  45% {
+    transform: rotateZ(2deg) translateY(0px);
+  }
+  65% {
+    transform: rotateZ(-3deg) translateY(20px);
+  }
+  85% {
+    transform: rotateZ(2deg) translateY(0px);
+  }
+  100% {
+    transform: rotate(0) translateY(0);
+  }
+}
+
+@keyframes suitcase {
+  0% {
+    transform: scale(0.2) translateY(100%);
+  }
+  100% {
+    transform: scale(0.9) translateY(0);
+  }
+}
+
+@keyframes leafRight {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-20deg) translate3d(-30px, -42px, 0);
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: rotateZ(15deg) translate3d(-5px, 55px, 0);
+  }
+  50% {
+    transform: rotateZ(-5deg) translate3d(-10px, 10px, 0);
+  }
+  65% {
+    transform: rotateZ(3deg) translate3d(-10px, 25px, 0);
+  }
+  75% {
+    transform: rotateZ(-3deg) translate3d(-10px, 5px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(3deg) translate3d(-10px, 25px, 0);
+  }
+}
+
+@keyframes leafGreen {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-20deg) translate3d(-30px, -42px, 0);
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: rotateZ(15deg) translate3d(-5px, 55px, 0);
+  }
+  50% {
+    transform: rotateZ(-5deg) translate3d(0px, 10px, 0);
+  }
+  65% {
+    transform: rotateZ(3deg) translate3d(0px, 25px, 0);
+  }
+  75% {
+    transform: rotateZ(-3deg) translate3d(5px, 5px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(3deg) translate3d(5px, 25px, 0);
+  }
+}
+
+@keyframes leafLeft {
+  0% {
+    opacity: 0;
+    transform: rotateZ(30deg) translate3d(8px, -85px, 0);
+  }
+  10% {
+    opacity: .5;
+    transform: rotateZ(15deg) translate3d(0px, -30px, 0);
+  }
+  30% {
+    opacity: 1;
+    transform: rotateZ(-10deg) translate3d(5px, 55px, 0);
+  }
+  50% {
+    transform: rotateZ(10deg) translate3d(5px, 5px, 0);
+  }
+  65% {
+    transform: rotateZ(-5deg) translate3d(5px, 40px, 0);
+  }
+  75% {
+    transform: rotateZ(0deg) translate3d(5px, 25px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(-5deg) translate3d(5px, 35px, 0);
+  }
+}
+
+
+
