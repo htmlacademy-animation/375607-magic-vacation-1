@@ -1,0 +1,201 @@
+.theme-light-blue {
+  .page-header__menu {
+    @media (max-width: $tablet) and (orientation: portrait) {
+      color: $light-blue;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      color: $light-blue;
+    }
+
+    a {
+      &::after {
+
+        @media (max-width: $tablet) and (orientation: portrait) {
+          background-color: $light-blue;
+        }
+
+        @media (max-width: $mobile) and (orientation: landscape) {
+          background-color: $light-blue;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: $light-blue;
+
+        &::after {
+          background-color: $light-blue;
+        }
+      }
+    }
+  }
+
+  .social-block__toggler {
+    color: $dark-blue;
+
+    &:hover {
+      color: $light-blue;
+      background-color: $c-light;
+
+      &::before {
+        background-color: $c-light;
+        border-color: $c-light;
+      }
+    }
+
+    &:focus {
+      color: $light-blue;
+      &::before {
+        border-color: $light-blue;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+
+      &::before {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .social-block--active {
+    .social-block__toggler:not(:hover){
+      color: $c-light;
+      &::before {
+        background-color: $light-blue;
+        border-color: $light-blue;
+      }
+    }
+  }
+
+  .social-block__link {
+    @media (max-width: $tablet) and (orientation: portrait) {
+      color: $dark-blue;
+      background-color: $dark-blue;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      background-color: $dark-blue;
+    }
+
+    &:hover {
+      color: $light-blue;
+    }
+
+    &:focus {
+      color: $light-blue;
+      border-color: $light-blue;
+    }
+
+    &:active,
+    &:active:focus {
+      color: $light-blue;
+    }
+
+  }
+}
+
+.theme-blue {
+  .page-header__menu {
+    @media (max-width: $tablet) and (orientation: portrait) {
+      color: $light-blue;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      color: $light-blue;
+    }
+
+    a {
+      &::after {
+
+        @media (max-width: $tablet) and (orientation: portrait) {
+          background-color: $light-blue;
+        }
+
+        @media (max-width: $mobile) and (orientation: landscape) {
+          background-color: $light-blue;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: $light-blue;
+
+        &::after {
+          background-color: $light-blue;
+        }
+      }
+    }
+  }
+
+  .social-block__toggler {
+    color: $light-blue;
+
+    &:hover {
+      color: $dark-blue;
+      background-color: $c-light;
+
+      &::before {
+        background-color: $c-light;
+        border-color: $c-light;
+      }
+    }
+
+    &:focus {
+      color: $dark-blue;
+      &::before {
+        border-color: $dark-blue;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+
+      &::before {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .social-block--active {
+    .social-block__toggler:not(:hover){
+      color: $c-light;
+      &::before {
+        background-color: $dark-blue;
+        border-color: $dark-blue;
+      }
+    }
+  }
+
+  .social-block__link {
+    @media (max-width: $tablet) and (orientation: portrait) {
+      color: $light-blue;
+      background-color: $light-blue;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      background-color: $light-blue;
+    }
+
+    &:hover {
+      color: $dark-blue;
+    }
+
+    &:focus {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+
+    &:active,
+    &:active:focus {
+      color: $dark-blue;
+    }
+
+  }
+}
