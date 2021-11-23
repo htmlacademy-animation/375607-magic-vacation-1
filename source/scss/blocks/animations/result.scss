@@ -19,6 +19,24 @@
       animation-fill-mode: forwards;
       color: $c-light;
     }
+
+    .result--negative {
+      .result__button {
+        opacity: 0;
+        animation-name: opacity;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+
+        span {
+          transform: translateX(79px) rotateZ(135deg);
+          animation-name: resultBtnNegative;
+          animation-timing-function: ease-out;
+          animation-duration: .5s;
+          animation-fill-mode: forwards;
+          transition-delay: .5s;
+        }
+      }
+    }
   }
 }
 
@@ -97,5 +115,17 @@
   }
   100% {
     color: $c-dark;
+  }
+}
+
+@keyframes resultBtnNegative {
+  0% {
+    transform: translateX(79px) rotateZ(135deg);
+  }
+  35% {
+    transform: translateX(53px) rotateZ(90deg);
+  }
+  100% {
+    transform: translateX(0px) rotateZ(0deg);
   }
 }

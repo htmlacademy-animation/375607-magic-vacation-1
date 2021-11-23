@@ -1,0 +1,53 @@
+.slider__control--prev {
+  opacity: 0;
+  transform: translateX(-79px) rotateZ(-45deg);
+  animation-name: btnPrev;
+  animation-timing-function: ease-out;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.slider__control--next {
+  opacity: 0;
+  transform: translateX(79px) rotateZ(45deg);
+  animation-name: btnNext;
+  animation-timing-function: ease-out;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.slider__pagination{
+  opacity: 0;
+  animation-name: opacity;
+  animation-timing-function: ease-out;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btnPrev {
+  0% {
+    opacity: 0;
+    transform: translateX(-79px) rotateZ(-45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotateZ(0);
+  }
+}
+
+@keyframes btnNext {
+  0% {
+    opacity: 0;
+    transform: translateX(79px) rotateZ(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotateZ(0deg);
+  }
+}
