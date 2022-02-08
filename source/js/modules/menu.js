@@ -1,4 +1,4 @@
-export default () => {
+export default (callback) => {
   let header = document.querySelector(`.js-header`);
   let menuToggler = document.querySelector(`.js-menu-toggler`);
   let menuLinks = document.querySelectorAll(`.js-menu-link`);
@@ -27,6 +27,10 @@ export default () => {
         setTimeout(() => {
           content.classList.remove('transition');
           window.location.href = menuLinks[i].href;
+
+          if(callback !== undefined) {
+            callback();
+          }
         }, TRANSITION_DELAY);
       }
 
