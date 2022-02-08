@@ -13,7 +13,9 @@ import AccentTypographyBuild from './modules/accept-typography-build';
 // init modules
 mobileHeight();
 slider();
-menu();
+menu(() => {
+  setImageForAnimate('#prize1');
+});
 footer();
 chat();
 result();
@@ -42,5 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
     animationGameTitle.runAnimation();
   }, 100);
 
+
+  setImageForAnimate('#prize1');
 });
+
+function setImageForAnimate(name) {
+  if (!name) {
+    return;
+  }
+  const image = document.querySelector(name);
+  const imageUrl = image.src;
+  image.src = `${imageUrl}?${Math.random()}`;
+}
 
